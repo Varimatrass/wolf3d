@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2013/12/30 23:44:17 by mde-jesu         ###   ########.fr        #
+#    Updated: 2014/01/03 19:26:11 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -57,7 +57,7 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
-	@rm ./libft/libft.a
+	@rm -f ./libft/libft.a
 
 re: fclean all
 
