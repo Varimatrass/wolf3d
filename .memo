@@ -1,0 +1,31 @@
+http://projet-moteur-3d.e-monsite.com/pages/raycasting/raycasting.html
+
+Dim_proj_screen = 320 x 200
+center_proj_screen = (160,100)
+
+Angle entre deux rayons consécutifs = 60/320 degrés
+
+Les murs ont tous la même hauteur
+
+La hauteur de la caméra est égale à la moitié de celle des murs.
+
+Au lieu de lancer un rayon pour chaque pixel nous allons lancer un rayon par colonne. Dés qu’un mur est détecté on traite la colonne à afficher à l'écran dans sa globalité et on passe ensuite à la colonne suivante.
+La taille de la colonne à tracer varie en fonction de la distance parcourue par le rayon.
+
+typedef struct		s_wall
+{
+	unsigned int	color;		/*color of wall*/
+	unsigned int	height;		/*height of wall in location*/
+	unsigned char	std_case;	/*0->standard wall 1->not standard wall*/
+	t_point			location;	/*location in case*/
+}					t_wall
+
+/*
+**standard wall (wall take all place of case and have same height in this)
+*/
+
+typedef struct		s_point
+{
+	unsigned int	x;
+	unsigned int	y;
+}					t_point
