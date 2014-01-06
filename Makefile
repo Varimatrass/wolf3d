@@ -6,11 +6,12 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2014/01/03 19:26:11 by mde-jesu         ###   ########.fr        #
+#    Updated: 2014/01/06 16:26:08 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
-NAME = ft_minishell1
+NAME = wolf3d
+
 DEBUG = yes
 LD = $(CC)
 SRCDIR = ./srcs
@@ -44,6 +45,9 @@ OBJS_PREF = $(addprefix $(OBJDIR)/, $(OBJS))
 
 all: $(NAME)
 
+$(OBJDIR):
+	mkdir $(OBJDIR)
+
 $(NAME): $(OBJS_PREF)
 	@make -C ./libft
 	@$(LD) -o $@ $^ $(LDFLAGS) $(INCDIR) $(LIB_CALL)
@@ -60,6 +64,5 @@ fclean: clean
 	@rm -f ./libft/libft.a
 
 re: fclean all
-
 
 .PHONY: clean fclean re all
