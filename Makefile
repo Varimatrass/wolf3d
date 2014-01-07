@@ -6,63 +6,70 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2014/01/06 16:26:08 by mde-jesu         ###   ########.fr        #
+#    Updated: 2014/01/07 11:53:17 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME = wolf3d
+SRC = main.c \
+		wolf.c
 
-DEBUG = yes
-LD = $(CC)
 SRCDIR = ./srcs
 OBJDIR = ./objs
 INCDIR = -I./includes -I./libft/includes -I/usr/X11/include/
 LIB_CALL = -L./libft -lft -L./usr/X11/lib -lmlx -lXext -lX11
 
-ifeq ($(DEBUG),yes)
-	CC = clang
-	CFLAGS = -fstack-protector-all -Wshadow -Wall -Werror -Wextra \
-		-Wunreachable-code -Wstack-protector -pedantic-errors \
-		-Wfatal-errors -Wstrict-prototypes -Wmissing-prototypes \
-		-Wwrite-strings -Wunreachable-code -pedantic \
-		-Wunknown-pragmas -Wdeclaration-after-statement \
-		-Wold-style-definition -Wmissing-field-initializers \
-		-Winline -g -W
-else
+CFLAGS = -Wall -Werror -Wextra -ansi -pedantic -pedantic-errors
+
+ifeq ($(W),)
 	CC = gcc
-	CFLAGS= -Wall -Wextra -Werror -O3
+	CFLAGS += -O3
+else
+	CC = clang
+	CFLAGS +=	-ggdb3 -fstack-protector-all -Wshadow -Wunreachable-code \
+				-Wstack-protector -pedantic-errors -O0 -W -Wundef -fno-common \
+				-Wfatal-errors -Wstrict-prototypes -Wmissing-prototypes -pedantic \
+				-Wwrite-strings -Wunknown-pragmas -Wdeclaration-after-statement\
+				-Wold-style-definition -Wmissing-field-initializers -Wfloat-equal\
+				-Wpointer-arith -Wnested-externs -Wstrict-overflow=5 -fno-common\
+				-Wno-missing-field-initializers -Wswitch-default -Wswitch-enum \
+				-Wbad-function-cast -Wredundant-decls -fno-omit-frame-pointer
 endif
 
-LDFLAGS = $(CFLAGS)
-SRC = main.c \
-	ft_sh1.c \
-	use_fork.c \
-	ft_builtins.c \
-	ft_env.c
+LD = $(CC)
+# LDFLAGS = $(CFLAGS)
 
 OBJS = $(SRC:.c=.o)
 OBJS_PREF = $(addprefix $(OBJDIR)/, $(OBJS))
 
-all: $(NAME)
+all: $(LIBFT) $(OBJDIR) $(NAME)
 
 $(OBJDIR):
 	mkdir $(OBJDIR)
 
 $(NAME): $(OBJS_PREF)
-	@make -C ./libft
 	@$(LD) -o $@ $^ $(LDFLAGS) $(INCDIR) $(LIB_CALL)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	@$(CC) -o $@ -c $< $(CFLAGS) $(INCDIR)
 
 clean:
-	@make -C libft clean
 	@rm -f $(OBJS_PREF)
 
 fclean: clean
 	@rm -f $(NAME)
-	@rm -f ./libft/libft.a
 
 re: fclean all
 
-.PHONY: clean fclean re all
+$(LIBFT):
+	@( $(MAKE) all -C ./libft)
+
+clean-ft:
+	@( $(MAKE) clean -C ./libft )
+
+fclean-ft:
+	@( $(MAKE) fclean -C ./libft )
+
+re-ft: fclean-ft $(LIBFT)
+
+PHONY: clean fclean re all clean-ft fclean-ft re-ft
