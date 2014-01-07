@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2014/01/07 11:53:17 by mde-jesu         ###   ########.fr        #
+#    Updated: 2014/01/07 12:00:12 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -37,7 +37,7 @@ else
 endif
 
 LD = $(CC)
-# LDFLAGS = $(CFLAGS)
+LDFLAGS = $(CFLAGS)
 
 OBJS = $(SRC:.c=.o)
 OBJS_PREF = $(addprefix $(OBJDIR)/, $(OBJS))
