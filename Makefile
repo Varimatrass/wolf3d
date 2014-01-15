@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2014/01/14 10:08:48 by mde-jesu         ###   ########.fr        #
+#    Updated: 2014/01/15 18:03:57 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -43,7 +43,7 @@ LD = $(CC)
 OBJS = $(SRC:.c=.o)
 OBJS_PREF = $(addprefix $(OBJDIR)/, $(OBJS))
 
-all: $(LIBFT) $(OBJDIR) $(NAME)
+all: $(SLD2) $(LIBFT) $(OBJDIR) $(NAME)
 
 $(OBJDIR):
 	mkdir $(OBJDIR)

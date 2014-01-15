@@ -6,9 +6,11 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/06 16:29:27 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/01/06 16:30:19 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/01/15 19:00:39 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "wolf.h"
 
 int		main(int argc, char **argv)
 {

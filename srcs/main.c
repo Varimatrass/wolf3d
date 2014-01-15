@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wolf.h                                             :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/01/06 16:26:47 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/01/15 19:00:10 by mde-jesu         ###   ########.fr       */
+/*   Created: 2014/01/15 18:04:19 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/01/15 19:00:32 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WOLF_H
-# define WOLF_H
+#include "wolf.h"
 
-# include "libft.h"
-# include "SDL.h"
+int		main()
+{
 
-# define WIN_DEFAULT_HEIGHT 1200
-# define WIN_DEFAULT_WIDTH 1200
 
-#endif /* !WOLF_H */
+	return (0);
+}
