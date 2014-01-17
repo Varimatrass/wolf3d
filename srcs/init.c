@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/17 12:08:13 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/01/17 14:09:06 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/01/17 14:52:24 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,23 @@ t_vars			*init_pos_dir_plane(t_vars *vars)
 	vars->dir.y = 0;
 	vars->plane.x = 0;
 	vars->plane.y = 0.66;
+	vars->time = 0;
+	vars->old_time = 0;
+/*	vars->
+	vars->
+	vars->
+	vars->
+	vars->
+	vars->
+	vars->
+	vars->
+	vars->
+	vars->
+	vars->
+	vars->
+	vars->
+	vars->
+	vars->*/
 	return (vars);
 }
 

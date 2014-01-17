@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/06 16:26:47 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/01/17 14:14:48 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/01/17 14:31:40 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@
 # define MAP_HEIGHT 24
 # define WIN_HEIGHT 1200
 # define WIN_WIDTH 1200
+
+# define W 10
 
 void			wolf3d(t_vars *vars, bool done, t_wolf wolf);
 t_vars			*init_pos_dir_plane(t_vars *vars);

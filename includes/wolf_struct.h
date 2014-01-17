@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/17 12:15:37 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/01/17 12:36:52 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/01/17 15:42:35 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,23 +47,21 @@ typedef struct	s_vars
 	t_int_coo	map;
 	t_int_coo	step;
 
-	double		cameraX;
 	double		time;
-	double		oldTime;
-	double perpWallDist;
+	double		old_time;
+	double		perpWallDist;
 
-	double frameTime;
-	double moveSpeed;
-	double rotSpeed;
+	double		frameTime;
+	double		moveSpeed;
+	double		rotSpeed;
 
-	double oldDirX;
-	double oldPlaneX;
+	double		oldDirX;
+	double		oldPlaneX;
 
-	int hit;
-	int side;
-	int lineHeight;
-	int drawStart;
-	int drawEnd;
+	int			side;
+	int			lineHeight;
+	int			drawStart;
+	int			drawEnd;
 }				t_vars;
 
 #endif /* !WOLF_STRUCT_H */
