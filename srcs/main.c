@@ -6,15 +6,11 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 18:04:19 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/01/17 14:13:53 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/01/17 23:23:18 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf.h"
-
-
-#include <stdio.h> /**/
-
 
 const int worldMap[MAP_WIDTH][MAP_HEIGHT]=
 {
