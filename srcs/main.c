@@ -6,13 +6,17 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 18:04:19 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/01/16 13:22:08 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/01/17 12:22:17 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf.h"
 
-const int worldMap[mapWidth][mapHeight]=
+
+#include <stdio.h> /**/
+
+
+const int worldMap[MAP_WIDTH][MAP_HEIGHT]=
 {
   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
@@ -40,23 +44,17 @@ const int worldMap[mapWidth][mapHeight]=
   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
 };
 
-void	init_x_and_y(t_x_and_y *pos, t_x_and_y *dir, t_x_and_y *plane);
-{
-	pos->x = 22;
-	pos->y = 12;
-	dir->x = -1;
-	dir->y = 0;
-	plane->x = 0;
-	plane->y = 0.66;
-}
-
 int		main()
 {
 	t_vars	*vars;
+	bool	done;
+	t_wolf	*wolf;
 
-	init_x_and_y(vars->pos, vars->dir, vars->plane);
-	screen(WIN_HEIGHT, WIN_WIDTH, 0, "wolf3d");
-	while (!done())
-		wolf3d(pos, dir, plane);
+	done = false;
+	vars = (t_vars *)malloc(sizeof(t_vars));
+	vars = init_pos_dir_plane(vars);
+	init_wolf(WIN_HEIGHT, WIN_WIDTH, wolf);
+	while (!done)
+		wolf3d(vars, done);
 	return (0);
 }

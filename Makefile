@@ -6,13 +6,15 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2014/01/15 18:03:57 by mde-jesu         ###   ########.fr        #
+#    Updated: 2014/01/17 12:20:03 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME = wolf3d
 SRC = main.c \
-		wolf.c
+	init.c \
+	quit.c \
+	wolf.c
 
 SRCDIR = ./srcs
 OBJDIR = ./objs

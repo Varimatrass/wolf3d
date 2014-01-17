@@ -6,14 +6,13 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/06 16:29:27 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/01/16 12:55:07 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/01/17 11:48:36 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf.h"
 
-int		()
+void	wolf3d(t_vars *vars, bool done)
 {
-
-
+	ft_putstr("bonjours");
 }
