@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/17 12:08:13 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/01/17 12:13:42 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/01/17 14:09:06 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_vars			*init_pos_dir_plane(t_vars *vars)
 	return (vars);
 }
 
-void			init_wolf(uint32_t win_height, uint32_t win_width, t_wolf *wolf)
+void			init_wolf(uint32_t height, uint32_t width, t_wolf *wolf)
 {
 	init_SDL();
 	if ((wolf->window = create_window(win_width, win_height, "wolf3d")) == NULL)

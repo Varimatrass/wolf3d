@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 18:04:19 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/01/17 12:22:17 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/01/17 14:13:53 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int		main()
 	vars = init_pos_dir_plane(vars);
 	init_wolf(WIN_HEIGHT, WIN_WIDTH, wolf);
 	while (!done)
-		wolf3d(vars, done);
+		wolf3d(vars, done, wolf);
+	quit_wolf(wolf);
 	return (0);
 }
