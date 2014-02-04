@@ -6,17 +6,13 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 18:04:19 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/01/17 14:13:53 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/01/18 00:10:16 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf.h"
 
-
-#include <stdio.h> /**/
-
-
-const int worldMap[MAP_WIDTH][MAP_HEIGHT]=
+const int map[MAP_WIDTH][MAP_HEIGHT]=
 {
   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
@@ -48,14 +44,14 @@ int		main()
 {
 	t_vars	*vars;
 	bool	done;
-	t_wolf	*wolf;
+	t_wolf	wolf;
 
 	done = false;
 	vars = (t_vars *)malloc(sizeof(t_vars));
-	vars = init_pos_dir_plane(vars);
-	init_wolf(WIN_HEIGHT, WIN_WIDTH, wolf);
+	vars = init_vars(vars);
+	init_wolf(WIN_HEIGHT, WIN_WIDTH, &wolf);
 	while (!done)
-		wolf3d(vars, done, wolf);
-	quit_wolf(wolf);
+		wolf3d(vars, done, &wolf);
+	quit_wolf(&wolf);
 	return (0);
 }

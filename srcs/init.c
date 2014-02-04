@@ -6,13 +6,13 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/17 12:08:13 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/01/17 14:52:24 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/01/18 00:11:03 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf.h"
 
-t_vars			*init_pos_dir_plane(t_vars *vars)
+t_vars			*init_vars(t_vars *vars)
 {
 	vars->pos.x = 22;
 	vars->pos.y = 12;
@@ -22,28 +22,13 @@ t_vars			*init_pos_dir_plane(t_vars *vars)
 	vars->plane.y = 0.66;
 	vars->time = 0;
 	vars->old_time = 0;
-/*	vars->
-	vars->
-	vars->
-	vars->
-	vars->
-	vars->
-	vars->
-	vars->
-	vars->
-	vars->
-	vars->
-	vars->
-	vars->
-	vars->
-	vars->*/
 	return (vars);
 }
 
 void			init_wolf(uint32_t height, uint32_t width, t_wolf *wolf)
 {
 	init_SDL();
-	if ((wolf->window = create_window(win_width, win_height, "wolf3d")) == NULL)
+	if ((wolf->window = create_window(width, height, "wolf3d")) == NULL)
 	{
 		sdl_error(E_SDL_WIN);
 		exit(1);

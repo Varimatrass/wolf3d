@@ -6,35 +6,38 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/06 16:29:27 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/01/17 15:56:33 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/01/18 00:55:27 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf.h"
 
-void	wolf3d(t_vars *vars, bool done, t_wolf wolf)
+void	wolf3d(t_vars *vars, bool done, t_wolf *wolf)
 {
 	size_t	x;
 
 	x = 0;
-	while (x < W)
+	while (x < WIN_WIDTH)
 	{
 		calcs(vars, x);
 		test_ray_dir(vars);
 		test_hit(vars);
 
-
-		if (side == 0)
-			perpWallDist = fabs((mapX - rayPosX + (1 - stepX) / 2) / rayDirX);
+		if (vars->side == 0)
+			vars->perp_wall_dist = fabs((vars->map.x - vars->ray_pos.x + (1 - vars->step.x) / 2) / vars->ray_dir.x);
 		else
-			perpWallDist = fabs((mapY - rayPosY + (1 - stepY) / 2) / rayDirY);
-		int lineHeight = abs(int(h / perpWallDist));
-		int drawStart = -lineHeight / 2 + h / 2;
-		if(drawStart < 0)drawStart = 0;
-		int drawEnd = lineHeight / 2 + h / 2;
-		if(drawEnd >= h)drawEnd = h - 1;
+			vars->perp_wall_dist = fabs((vars->map.y - vars->ray_pos.y + (1 - vars->step.y) / 2) / vars->ray_dir.y);
+
+		vars->line_height = abs(int(h / vars->perp_wall_dist));
+		vars->draw_start = -(vars->line_height) / 2 + h / 2;
+		if(vars->draw_start < 0)
+			vars->draw_start = 0;
+		vars->draw_end = vars->line_height / 2 + h / 2;
+		if(vars->draw_end >= h)
+			vars->draw_end = h - 1;
+
 		ColorRGB color;
-		switch(worldMap[mapX][mapY])
+		switch(map[mapX][mapY])
 		{
 		case 1:  color = RGB_Red;  break; //red
 		case 2:  color = RGB_Green;  break; //green
@@ -42,54 +45,55 @@ void	wolf3d(t_vars *vars, bool done, t_wolf wolf)
 		case 4:  color = RGB_White;  break; //white
 		default: color = RGB_Yellow; break; //yellow
 		}
-		if (side == 1) {color = color / 2;}
-		verLine(x, drawStart, drawEnd, color);
-	}
 
-/*end of while*/
-
-	oldTime = time;
-	time = getTicks();
-	double frameTime = (time - oldTime) / 1000.0;
-	print(1.0 / frameTime);
-	redraw();
-	cls();
-	double moveSpeed = frameTime * 5.0;
-	double rotSpeed = frameTime * 3.0;
-	readKeys();
-	if (keyDown(SDLK_UP))
-	{
-		if(worldMap[int(posX + dirX * moveSpeed)][int(posY)] == false) posX += dirX * moveSpeed;
-		if(worldMap[int(posX)][int(posY + dirY * moveSpeed)] == false) posY += dirY * moveSpeed;
-	}
-	if (keyDown(SDLK_DOWN))
-	{
-		if(worldMap[int(posX - dirX * moveSpeed)][int(posY)] == false) posX -= dirX * moveSpeed;
-		if(worldMap[int(posX)][int(posY - dirY * moveSpeed)] == false) posY -= dirY * moveSpeed;
-	}
-	if (keyDown(SDLK_RIGHT))
-	{
-		double oldDirX = dirX;
-		dirX = dirX * cos(-rotSpeed) - dirY * sin(-rotSpeed);
-		dirY = oldDirX * sin(-rotSpeed) + dirY * cos(-rotSpeed);
-		double oldPlaneX = planeX;
-		planeX = planeX * cos(-rotSpeed) - planeY * sin(-rotSpeed);
-		planeY = oldPlaneX * sin(-rotSpeed) + planeY * cos(-rotSpeed);
-	}
-	if (keyDown(SDLK_LEFT))
-	{
-		double oldDirX = dirX;
-		dirX = dirX * cos(rotSpeed) - dirY * sin(rotSpeed);
-		dirY = oldDirX * sin(rotSpeed) + dirY * cos(rotSpeed);
-		double oldPlaneX = planeX;
-		planeX = planeX * cos(rotSpeed) - planeY * sin(rotSpeed);
-		planeY = oldPlaneX * sin(rotSpeed) + planeY * cos(rotSpeed);
-	}
-
-/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+		if (vars->side == 1) {color = color / 2;}
+		verLine(x, vars->draw_start, vars->draw_end, color);
 
 		x++;
 	}
+
+	vars->old_time = vars->time;
+	vars->time = getTicks();
+	vars->frame_time = (vars->time - vars->old_time) / 1000.0;
+	print(1.0 / vars->frame_time);
+	redraw();
+	cls();
+	vars->move_speed = vars->frame_time * 5.0;
+	vars->rot_speed = vars->frame_time * 3.0;
+	readKeys();
+	if (keyDown(SDLK_UP))
+	{
+		if(map[int(vars->pos.x + vars->dir.x * vars->move_speed)][int(vars->pos.y)] == false)
+			vars->pos.x += vars->dir.x * vars->move_speed;
+		if(map[int(vars->pos.x)][int(vars->pos.y + vars->dir.y * vars->move_speed)] == false)
+			vars->pos.y += vars->dir.y * vars->move_speed;
+	}
+	if (keyDown(SDLK_DOWN))
+	{
+		if(map[int(vars->pos.x - vars->dir.x * vars->move_speed)][int(vars->pos.y)] == false)
+			vars->pos.x -= vars->dir.x * vars->move_speed;
+		if(map[int(vars->pos.x)][int(vars->pos.y - vars->dir.y * vars->move_speed)] == false)
+			vars->pos.y -= vars->dir.y * vars->move_speed;
+	}
+	if (keyDown(SDLK_RIGHT))
+	{
+		vars->old_dirx = vars->dir.x;
+		vars->dir.x = vars->dir.x * cos(-(vars->rot_speed)) - vars->dir.y * sin(-(vars->rot_speed));
+		vars->dir.y = vars->old_dirx * sin(-(vars->rot_speed)) + vars->dir.y * cos(-(vars->rot_speed));
+		vars->old_planex = vars->plane.x;
+		vars->plane.x = vars->plane.x * cos(-(vars->rot_speed)) - vars->plane.y * sin(-(vars->rot_speed));
+		vars->plane.y = vars->old_planex * sin(-(vars->rot_speed)) + vars->plane.y * cos(-(vars->rot_speed));
+	}
+	if (keyDown(SDLK_LEFT))
+	{
+		vars->old_dirx = vars->dir.x;
+		vars->dir.x = vars->dir.x * cos(vars->rot_speed) - vars->dir.y * sin(vars->rot_speed);
+		vars->dir.y = vars->old_dirx * sin(vars->rot_speed) + vars->dir.y * cos(vars->rot_speed);
+		vars->old_planex = vars->plane.x;
+		vars->plane.x = vars->plane.x * cos(vars->rot_speed) - vars->plane.y * sin(vars->rot_speed);
+		vars->plane.y = vars->old_planex * sin(vars->rot_speed) + vars->plane.y * cos(vars->rot_speed);
+	}
+
 }
 
 void	test_hit(t_vars vars)
@@ -111,7 +115,7 @@ void	test_hit(t_vars vars)
 			vars->map.y += vars->step.y;
 			vars->side = 1;
 		}
-		if (worldMap[vars->map.x][vars->map.y] > 0) hit = 1;
+		if (map[vars->map.x][vars->map.y] > 0) hit = 1;
 	}
 }
 
@@ -144,7 +148,7 @@ void	calcs(t_vars *vars, size_t x)
 	double		camera;
 	t_dbl_coo	ray_dir_square;
 
-	camera = 2 * x / double(W) - 1;
+	camera = 2 * x / double(WIN_WIDTH) - 1;
 	vars->ray_pos.x = vars->pos.x;
 	vars->ray_pos.y = vars->pos.y;
 	vars->ray_dir.x = vars->dir.x + vars->plane.x * camera;

@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/17 12:15:37 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/01/17 15:42:35 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/01/18 00:46:08 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,19 +49,19 @@ typedef struct	s_vars
 
 	double		time;
 	double		old_time;
-	double		perpWallDist;
+	double		perp_wall_dist;
 
-	double		frameTime;
-	double		moveSpeed;
-	double		rotSpeed;
+	double		frame_time;
+	double		move_speed;
+	double		rot_speed;
 
-	double		oldDirX;
-	double		oldPlaneX;
+	double		old_dirx;
+	double		old_planex;
 
 	int			side;
-	int			lineHeight;
-	int			drawStart;
-	int			drawEnd;
+	int			line_height;
+	int			draw_start;
+	int			draw_end;
 }				t_vars;
 
 #endif /* !WOLF_STRUCT_H */
