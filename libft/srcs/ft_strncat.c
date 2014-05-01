@@ -6,7 +6,7 @@
 /*   By: mde-jesu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/24 23:00:24 by mde-jesu          #+#    #+#             */
-/*   Updated: 2013/11/30 16:51:25 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/04/25 14:19:11 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,15 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 
 	i = 0;
 	j = 0;
-	while (s1[i])
-		i++;
-	while (j < n && s2[j] != 0)
+	while (s1[i] != '\0')
 	{
-		s1[i + j] = s2[j];
+		i++;
+	}
+	while ((s1[i] = s2[j]) && j < n)
+	{
+		i++;
 		j++;
 	}
-	s1[i + j] = '\0';
+	s1[i] = '\0';
 	return (s1);
 }

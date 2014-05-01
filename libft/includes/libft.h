@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 09:58:43 by mde-jesu          #+#    #+#             */
-/*   Updated: 2013/12/25 19:56:11 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2013/12/30 03:22:28 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,11 +80,18 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
+
 size_t	ft_putchar(char c);
 size_t	ft_putstr(char const *s);
 size_t	ft_putendl(char const *s);
 size_t	ft_putnbr(int n);
+size_t	ft_putunbr(unsigned int n);
 size_t	ft_putlong(long l);
+size_t	ft_putoct(unsigned int n);
+size_t	ft_puthexa(unsigned int n);
+size_t	ft_puthexa_maj(unsigned int n);
+size_t	ft_putptr(unsigned long n);
+
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);

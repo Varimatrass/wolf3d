@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/10 23:28:36 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/02/10 23:30:06 by mde-jesu         ###   ########.fr       */
+/*   Created: 2014/02/19 15:03:48 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/02/19 15:03:49 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-int		ft_tolower(int c)
+# define BUFF_SIZE 4096
+
+int					get_next_line(int const fd, char **line);
+
+typedef struct		s_read
 {
-	if (c <= 'Z' && c >= 'A')
-		c += 'a' - 'A';
-	return (c);
-}
+	int				size;
+	int				index;
+	int				fd;
+	char			*read;
+	struct s_read	*next;
+}					t_read;
+
+#endif /* !GET_NEXT_LINE_H */
