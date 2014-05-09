@@ -6,7 +6,7 @@
 /*   By: tbalea <tbalea@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/10 17:17:55 by tbalea            #+#    #+#             */
-/*   Updated: 2014/01/19 01:59:47 by tbalea           ###   ########.fr       */
+/*   Updated: 2014/05/09 13:21:15 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,13 +116,17 @@ int		wall_color(t_size ray, t_wall wal, float wol, float wra)
 
 void	draw(t_wolf wol, t_wall wal, t_win win, t_size siz)
 {
-	int		i;
 	t_max	max;
+/*
+	int		i;
 	t_color	c;
+*/
 
 	wal.rang = (int *)malloc(sizeof(int) * max.max);
+/*
 	i = 0;
 	c = color_env();
+*/
 	max = max_wall(siz);
 	draw_earthnsky(win, siz);
 	wal = ray_casting(wol, wal, max, siz);
