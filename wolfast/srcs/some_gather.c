@@ -6,7 +6,7 @@
 /*   By: gmarais <gmarais@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/18 18:23:47 by gmarais           #+#    #+#             */
-/*   Updated: 2014/05/09 13:54:02 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/09 14:31:27 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,21 +100,21 @@ int			load_end_screens(t_env *e, t_tex *image, char *file)
 */
 int			text_loader(t_env *e)
 {
-	text_load(e, &e->tex_tab[0], "./xpm_texts/trees2.xpm");
-	text_load(e, &e->tex_tab[1], "./xpm_texts/trees1.xpm");
-	text_load(e, &e->tex_tab[2], "./xpm_texts/grock.xpm");
-	text_load(e, &e->tex_tab[3], "./xpm_texts/plank.xpm");
-	text_load(e, &e->tex_tab[4], "./xpm_texts/housedoor5.xpm");
-	text_load(e, &e->tex_tab[5], "./xpm_texts/housewall5.xpm");
-	text_load(e, &e->tex_tab[6], "./xpm_texts/housewin5.xpm");
-	text_load(e, &e->tex_tab[7], "./xpm_texts/monstblok0.xpm");
-	text_load(e, &e->tex_tab[8], "./xpm_texts/monstblok.xpm");
-	text_load(e, &e->tex_tab[9], "./xpm_texts/grass.xpm");
-	text_load(e, &e->tex_tab[10], "./xpm_texts/monster0.xpm");
-	text_load(e, &e->tex_tab[11], "./xpm_texts/monster0a.xpm");
-	text_load(e, &e->tex_tab[12], "./xpm_texts/Monstre0d.xpm");
-	text_load(e, &e->tex_tab[13], "./xpm_texts/projectile0.xpm");
-	load_skybox(e, &e->skybox, "./xpm_texts/skybox.xpm");
+	text_load(e, &e->tex_tab[0], "../xpm_texts/trees2.xpm");
+	text_load(e, &e->tex_tab[1], "../xpm_texts/trees1.xpm");
+	text_load(e, &e->tex_tab[2], "../xpm_texts/grock.xpm");
+	text_load(e, &e->tex_tab[3], "../xpm_texts/plank.xpm");
+	text_load(e, &e->tex_tab[4], "../xpm_texts/housedoor5.xpm");
+	text_load(e, &e->tex_tab[5], "../xpm_texts/housewall5.xpm");
+	text_load(e, &e->tex_tab[6], "../xpm_texts/housewin5.xpm");
+	text_load(e, &e->tex_tab[7], "../xpm_texts/monstblok0.xpm");
+	text_load(e, &e->tex_tab[8], "../xpm_texts/monstblok.xpm");
+	text_load(e, &e->tex_tab[9], "../xpm_texts/grass.xpm");
+	text_load(e, &e->tex_tab[10], "../xpm_texts/monster0.xpm");
+	text_load(e, &e->tex_tab[11], "../xpm_texts/monster0a.xpm");
+	text_load(e, &e->tex_tab[12], "../xpm_texts/Monstre0d.xpm");
+	text_load(e, &e->tex_tab[13], "../xpm_texts/projectile0.xpm");
+	load_skybox(e, &e->skybox, "../xpm_texts/skybox.xpm");
 	if (!e->tex_tab[0].img || !e->tex_tab[1].img
 		|| !e->tex_tab[2].img || !e->tex_tab[3].img
 		|| !e->tex_tab[4].img || !e->tex_tab[5].img
