@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/12 13:52:23 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/05/12 13:52:24 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/12 16:47:01 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,6 @@ void		init_moves(t_env *e)
 	eat_cookies(e);
 }
 
-/*
-** the main function to create the whole image
-*/
 int			draw(t_env *e)
 {
 	t_trac_data	d;

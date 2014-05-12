@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/12 13:51:59 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/05/12 13:52:00 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/12 16:46:43 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 int			interface_loader(t_env *e)
 {
-	text_load(e, &e->gun_tex[0], "../xpm_texts/pistolet.xpm");
-	text_load(e, &e->gun_tex[1], "../xpm_texts/pistolet0.xpm");
-	text_load(e, &e->tex_tab[14], "../xpm_texts/cookies.xpm");
-	text_load(e, &e->tex_tab[15], "../xpm_texts/key.xpm");
-	text_load(e, &e->tex_tab[16], "../xpm_texts/housedoor0.xpm");
-	text_load(e, &e->tex_tab[17], "../xpm_texts/housewin0.xpm");
-	text_load(e, &e->tex_tab[18], "../xpm_texts/housewall0.xpm");
-	text_load(e, &e->tex_tab[19], "../xpm_texts/porte.xpm");
-	load_end_screens(e, &e->end_screen[0], "../xpm_texts/youdied.xpm");
-	load_end_screens(e, &e->end_screen[1], "../xpm_texts/youwon.xpm");
+	text_load(e, &e->gun_tex[0], "./xpm_texts/pistolet.xpm");
+	text_load(e, &e->gun_tex[1], "./xpm_texts/pistolet0.xpm");
+	text_load(e, &e->tex_tab[14], "./xpm_texts/cookies.xpm");
+	text_load(e, &e->tex_tab[15], "./xpm_texts/key.xpm");
+	text_load(e, &e->tex_tab[16], "./xpm_texts/housedoor0.xpm");
+	text_load(e, &e->tex_tab[17], "./xpm_texts/housewin0.xpm");
+	text_load(e, &e->tex_tab[18], "./xpm_texts/housewall0.xpm");
+	text_load(e, &e->tex_tab[19], "./xpm_texts/porte.xpm");
+	load_end_screens(e, &e->end_screen[0], "./xpm_texts/youdied.xpm");
+	load_end_screens(e, &e->end_screen[1], "./xpm_texts/youwon.xpm");
 	if (!e->gun_tex[0].img || !e->gun_tex[1].img
 		|| !e->tex_tab[14].img || !e->tex_tab[15].img
 		|| !e->tex_tab[16].img || !e->tex_tab[17].img
@@ -33,9 +33,6 @@ int			interface_loader(t_env *e)
 	return (0);
 }
 
-/*
-** Print shape of world in stdout if needed for debug
-*/
 void		print_world(t_env *e)
 {
 	size_t	i;
@@ -58,9 +55,6 @@ void		print_world(t_env *e)
 	}
 }
 
-/*
-** initializing player's coordinates and variables
-*/
 void		player_init(t_env *e)
 {
 	e->p.life = 5;
@@ -99,11 +93,11 @@ void		patch_sprite_tab(t_env *e)
 	}
 }
 
-int			main()
+int			main(void)
 {
 	t_env	e;
 
-	if (create_world(&e, "../world.w3d") || gather_sprites(&e, "../sprites.w3d"))
+	if (create_world(&e, "./world.w3d") || gather_sprites(&e, "./sprites.w3d"))
 		return (1);
 	patch_sprite_tab(&e);
 	player_init(&e);

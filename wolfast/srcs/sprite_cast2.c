@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/12 13:55:05 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/05/12 13:55:07 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/12 16:56:11 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void		print_my_sprite(t_env *e, t_trac_data *d, t_spricast *va)
 	}
 }
 
-void		get_gun_color(t_env	*e, int  i, int  j, t_colors *col)
+void		get_gun_color(t_env	*e, int i, int j, t_colors *col)
 {
 	int		id;
 

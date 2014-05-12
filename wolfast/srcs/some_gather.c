@@ -6,15 +6,12 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/12 13:52:52 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/05/12 13:52:53 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/12 16:47:32 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf3d.h"
 
-/*
-** gather infos about the sprites in the file linked by path.
-*/
 int			gather_sprites(t_env *e, char *path)
 {
 	t_gather	var;
@@ -44,9 +41,6 @@ int			gather_sprites(t_env *e, char *path)
 	return (0);
 }
 
-/*
-** loading basic textures
-*/
 int			text_load(t_env *e, t_tex *image, char *file)
 {
 	int		w;
@@ -61,9 +55,6 @@ int			text_load(t_env *e, t_tex *image, char *file)
 	return (0);
 }
 
-/*
-** loading the sky texture
-*/
 int			load_skybox(t_env *e, t_tex *image, char *file)
 {
 	int		w;
@@ -78,9 +69,6 @@ int			load_skybox(t_env *e, t_tex *image, char *file)
 	return (0);
 }
 
-/*
-** loading the end_screen textures
-*/
 int			load_end_screens(t_env *e, t_tex *image, char *file)
 {
 	int		w;
@@ -95,26 +83,23 @@ int			load_end_screens(t_env *e, t_tex *image, char *file)
 	return (0);
 }
 
-/*
-** loading images
-*/
 int			text_loader(t_env *e)
 {
-	text_load(e, &e->tex_tab[0], "../xpm_texts/trees2.xpm");
-	text_load(e, &e->tex_tab[1], "../xpm_texts/trees1.xpm");
-	text_load(e, &e->tex_tab[2], "../xpm_texts/grock.xpm");
-	text_load(e, &e->tex_tab[3], "../xpm_texts/plank.xpm");
-	text_load(e, &e->tex_tab[4], "../xpm_texts/housedoor5.xpm");
-	text_load(e, &e->tex_tab[5], "../xpm_texts/housewall5.xpm");
-	text_load(e, &e->tex_tab[6], "../xpm_texts/housewin5.xpm");
-	text_load(e, &e->tex_tab[7], "../xpm_texts/monstblok0.xpm");
-	text_load(e, &e->tex_tab[8], "../xpm_texts/monstblok.xpm");
-	text_load(e, &e->tex_tab[9], "../xpm_texts/grass.xpm");
-	text_load(e, &e->tex_tab[10], "../xpm_texts/monster0.xpm");
-	text_load(e, &e->tex_tab[11], "../xpm_texts/monster0a.xpm");
-	text_load(e, &e->tex_tab[12], "../xpm_texts/Monstre0d.xpm");
-	text_load(e, &e->tex_tab[13], "../xpm_texts/projectile0.xpm");
-	load_skybox(e, &e->skybox, "../xpm_texts/skybox.xpm");
+	text_load(e, &e->tex_tab[0], "./xpm_texts/trees2.xpm");
+	text_load(e, &e->tex_tab[1], "./xpm_texts/trees1.xpm");
+	text_load(e, &e->tex_tab[2], "./xpm_texts/grock.xpm");
+	text_load(e, &e->tex_tab[3], "./xpm_texts/plank.xpm");
+	text_load(e, &e->tex_tab[4], "./xpm_texts/housedoor5.xpm");
+	text_load(e, &e->tex_tab[5], "./xpm_texts/housewall5.xpm");
+	text_load(e, &e->tex_tab[6], "./xpm_texts/housewin5.xpm");
+	text_load(e, &e->tex_tab[7], "./xpm_texts/monstblok0.xpm");
+	text_load(e, &e->tex_tab[8], "./xpm_texts/monstblok.xpm");
+	text_load(e, &e->tex_tab[9], "./xpm_texts/grass.xpm");
+	text_load(e, &e->tex_tab[10], "./xpm_texts/monster0.xpm");
+	text_load(e, &e->tex_tab[11], "./xpm_texts/monster0a.xpm");
+	text_load(e, &e->tex_tab[12], "./xpm_texts/Monstre0d.xpm");
+	text_load(e, &e->tex_tab[13], "./xpm_texts/projectile0.xpm");
+	load_skybox(e, &e->skybox, "./xpm_texts/skybox.xpm");
 	if (!e->tex_tab[0].img || !e->tex_tab[1].img
 		|| !e->tex_tab[2].img || !e->tex_tab[3].img
 		|| !e->tex_tab[4].img || !e->tex_tab[5].img

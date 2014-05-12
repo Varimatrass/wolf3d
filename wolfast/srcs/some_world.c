@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/12 13:53:54 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/05/12 13:53:55 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/12 16:49:35 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,11 @@ static void	world_assign(t_env *e, t_cnt *c, char *line)
 	int		count;
 
 	count = numsize(line, c->i);
-	e->world[c->j][c->k] = ft_strsub(line, c->i , count);
+	e->world[c->j][c->k] = ft_strsub(line, c->i, count);
 	(c->k)++;
 	c->i += count;
 }
 
-/*
-** getting the infos from the file.
-*/
 int			world_init(t_env *e, char *path)
 {
 	int		fd;
@@ -52,9 +49,6 @@ int			world_init(t_env *e, char *path)
 	return (0);
 }
 
-/*
-** create the shape of the world by reading the link given by path.
-*/
 int			create_world(t_env *e, char *path)
 {
 	size_t	max_x;

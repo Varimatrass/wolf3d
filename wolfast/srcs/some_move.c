@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/12 13:53:25 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/05/12 13:53:27 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/12 16:48:09 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,11 @@ void		apply_strafing(t_env *e)
 
 void		apply_rot(t_env *e)
 {
-	double old_dir_x = e->p.dir_x;
-	double old_plane_x = e->p.plane_x;
+	double old_dir_x;
+	double old_plane_x;
 
+	old_dir_x = e->p.dir_x;
+	old_plane_x = e->p.plane_x;
 	if (e->move.rrgt != e->move.rlft)
 	{
 		if (e->move.rrgt == 1)
@@ -108,9 +110,6 @@ void		apply_teleport(t_env *e)
 		teleport_bis(e);
 }
 
-/*
-** SHOOT will you ?
-*/
 void		shoot(t_env *e)
 {
 	e->shooting = 1;

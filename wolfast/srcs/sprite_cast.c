@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/12 13:54:55 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/05/12 13:54:57 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/12 16:55:28 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void		set_trans_xy(t_env *e, t_spricast *va)
 								+ e->p.plane_x * rel_spt_y);
 }
 
-void		set_sprite_draw_strt_nd(t_spricast *va,  t_trac_data *d, t_env *e)
+void		set_sprite_draw_strt_nd(t_spricast *va, t_trac_data *d, t_env *e)
 {
 	int		z_mv;
 
@@ -70,7 +70,7 @@ void		set_sprite_draw_strt_nd(t_spricast *va,  t_trac_data *d, t_env *e)
 	d->draw_start = va->sprite_screen_x - va->sprite_width / 2;
 	if (d->draw_start < 0)
 		d->draw_start = 0;
-	d->draw_end =  va->sprite_screen_x + va->sprite_width / 2;
+	d->draw_end = va->sprite_screen_x + va->sprite_width / 2;
 	if (d->draw_end >= SCREEN_WIDTH)
 		d->draw_end = SCREEN_WIDTH - 1;
 }
@@ -84,7 +84,7 @@ void		pimp_my_sprite(t_env *e, t_trac_data *d, t_spricast *va)
 	z_mv = (e->sprite_tab[va->i].tex_id >= 14) ? 20 : 0;
 	id = (e->sprite_tab[va->i]).tex_id;
 	dec = (va->y - z_mv) * 256 - SCREEN_HEIGHT * 128 + va->sprite_height * 128;
-	d->tex_y = ((dec * TEX_HEIGHT) / va->sprite_height) /256;
+	d->tex_y = ((dec * TEX_HEIGHT) / va->sprite_height) / 256;
 	va->col.b = ((e->tex_tab[id]).data)[(d->tex_y
 											* (e->tex_tab[id]).sizeline
 											+ ((e->tex_tab[id]).bpp / 8)

@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/12 13:51:48 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/05/12 13:51:50 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/12 14:23:05 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void		dead_clear_img(t_env *e)
 	}
 }
 
-void		get_end_color(t_env	*e, int  i, int  j, t_colors *col)
+void		get_end_color(t_env	*e, int i, int j, t_colors *col)
 {
 	int		id;
 

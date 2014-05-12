@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/12 13:53:35 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/05/12 13:53:36 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/12 16:49:06 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,6 @@ void		open_door(t_env *e)
 	}
 }
 
-/*
-** first attempt for a very basic ai
-*/
 void		basic_ai(t_env *e)
 {
 	int				i;

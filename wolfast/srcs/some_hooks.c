@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/12 13:53:05 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/05/12 13:53:10 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/12 16:47:51 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,6 @@ int			numsize(char *str, int i)
 	return (count);
 }
 
-/*
-** getting the size of the tab to allocate with dynamic memory.
-*/
 int			get_world_size(size_t *max_x, size_t *max_y, char *path)
 {
 	int		fd;
@@ -84,14 +81,10 @@ int			get_world_size(size_t *max_x, size_t *max_y, char *path)
 		*max_x = (maxx > *max_x) ? maxx : *max_x;
 		(*max_y)++;
 	}
-	while (0 && (*max_x && *max_y));
 	close(fd);
 	return (0);
 }
 
-/*
-** allocating memory...
-*/
 int			world_alloc(t_env *e, int max_x, int max_y)
 {
 	int		i;
