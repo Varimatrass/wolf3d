@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2014/05/12 13:48:15 by mde-jesu         ###   ########.fr        #
+#    Updated: 2014/05/12 17:06:49 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -29,7 +29,7 @@ SRC = main.c \
 	sprite_cast2.c
 
 LIBFT = libft/libft.a
-SRCDIR = ./
+SRCDIR = ./srcs
 OBJDIR = ./objs
 INCDIR = -I./includes -I./libft/includes
 INCDIR += -I /usr/X11/include
