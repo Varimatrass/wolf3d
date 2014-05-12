@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2014/05/09 14:00:18 by mde-jesu         ###   ########.fr        #
+#    Updated: 2014/05/12 13:48:15 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -28,7 +28,8 @@ SRC = main.c \
 	teleport_bis.c \
 	sprite_cast2.c
 
-SRCDIR = ./srcs
+LIBFT = libft/libft.a
+SRCDIR = ./
 OBJDIR = ./objs
 INCDIR = -I./includes -I./libft/includes
 INCDIR += -I /usr/X11/include
