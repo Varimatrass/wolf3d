@@ -6,7 +6,7 @@
 /*   By: gmarais <gmarais@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/18 18:50:30 by gmarais           #+#    #+#             */
-/*   Updated: 2014/05/09 13:53:57 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/14 14:17:18 by matthias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define WOLF3D_H
 
 # include <libft.h>
-#include <get_next_line.h>
+# include <get_next_line.h>
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
