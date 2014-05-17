@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmarais <gmarais@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 17:21:57 by gmarais           #+#    #+#             */
-/*   Updated: 2013/11/21 17:26:09 by gmarais          ###   ########.fr       */
+/*   Created: 2014/05/17 06:39:43 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/05/17 06:39:44 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_strclr(char *s)

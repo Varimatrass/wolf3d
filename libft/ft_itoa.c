@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmarais <gmarais@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/25 13:58:14 by gmarais           #+#    #+#             */
-/*   Updated: 2013/12/02 16:46:17 by gmarais          ###   ########.fr       */
+/*   Created: 2014/05/17 06:35:30 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/05/17 06:35:30 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_ctdigit(int n)

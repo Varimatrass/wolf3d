@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmarais <gmarais@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 17:11:12 by gmarais           #+#    #+#             */
-/*   Updated: 2013/11/24 20:01:22 by gmarais          ###   ########.fr       */
+/*   Created: 2014/05/17 06:42:22 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/05/17 06:42:23 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strnew(size_t size)

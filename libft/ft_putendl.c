@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmarais <gmarais@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/25 17:49:04 by gmarais           #+#    #+#             */
-/*   Updated: 2013/11/25 17:53:51 by gmarais          ###   ########.fr       */
+/*   Created: 2014/05/17 06:38:15 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/05/17 06:38:16 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_putendl(char const *s)

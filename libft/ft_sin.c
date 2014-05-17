@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sin.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmarais <gmarais@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/12/17 16:57:37 by gmarais           #+#    #+#             */
-/*   Updated: 2013/12/21 18:44:33 by gmarais          ###   ########.fr       */
+/*   Created: 2014/05/17 06:39:18 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/05/17 06:39:19 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 double		ft_sin(double radian)

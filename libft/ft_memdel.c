@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmarais <gmarais@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 17:03:37 by gmarais           #+#    #+#             */
-/*   Updated: 2013/11/21 17:10:43 by gmarais          ###   ########.fr       */
+/*   Created: 2014/05/17 06:37:19 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/05/17 06:37:20 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_memdel(void **ap)

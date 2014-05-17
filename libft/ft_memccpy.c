@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmarais <gmarais@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 13:08:26 by gmarais           #+#    #+#             */
-/*   Updated: 2013/11/22 16:04:13 by gmarais          ###   ########.fr       */
+/*   Created: 2014/05/17 06:36:49 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/05/17 06:36:50 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)

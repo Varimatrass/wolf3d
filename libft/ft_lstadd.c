@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmarais <gmarais@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/26 16:39:56 by gmarais           #+#    #+#             */
-/*   Updated: 2013/11/27 12:48:09 by gmarais          ###   ########.fr       */
+/*   Created: 2014/05/17 06:35:41 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/05/17 06:35:41 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_lstadd(t_list **alst, t_list *new)

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmarais <gmarais@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 11:22:28 by gmarais           #+#    #+#             */
-/*   Updated: 2013/11/24 17:18:49 by gmarais          ###   ########.fr       */
+/*   Created: 2014/05/17 06:42:09 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/05/17 06:42:09 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strncpy(char *s1, char *s2, size_t n)

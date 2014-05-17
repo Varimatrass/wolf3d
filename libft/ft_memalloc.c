@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmarais <gmarais@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 16:50:57 by gmarais           #+#    #+#             */
-/*   Updated: 2013/11/24 19:50:27 by gmarais          ###   ########.fr       */
+/*   Created: 2014/05/17 06:36:41 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/05/17 06:36:42 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memalloc(size_t size)

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmarais <gmarais@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/24 18:50:10 by gmarais           #+#    #+#             */
-/*   Updated: 2013/12/29 18:46:08 by gmarais          ###   ########.fr       */
+/*   Created: 2014/05/17 06:42:45 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/05/17 06:42:46 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static char	*ft_subfunction(size_t i, size_t count, char const *s)

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmarais <gmarais@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/24 15:01:18 by gmarais           #+#    #+#             */
-/*   Updated: 2013/11/29 17:32:00 by gmarais          ###   ########.fr       */
+/*   Created: 2014/05/17 06:42:16 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/05/17 06:42:16 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int		ft_strnequ(char const *s1, char const *s2, size_t n)

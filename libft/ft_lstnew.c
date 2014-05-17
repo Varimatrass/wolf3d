@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmarais <gmarais@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/26 15:41:25 by gmarais           #+#    #+#             */
-/*   Updated: 2013/11/27 12:31:44 by gmarais          ###   ########.fr       */
+/*   Created: 2014/05/17 06:36:33 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/05/17 06:36:33 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
