@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmarais <gmarais@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 11:47:33 by gmarais           #+#    #+#             */
-/*   Updated: 2013/12/17 19:06:08 by gmarais          ###   ########.fr       */
+/*   Created: 2014/05/17 06:47:21 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/05/17 06:47:21 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
