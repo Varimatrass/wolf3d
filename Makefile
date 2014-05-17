@@ -6,24 +6,36 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2014/01/17 12:20:03 by mde-jesu         ###   ########.fr        #
+#    Updated: 2014/05/12 17:06:49 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME = wolf3d
 SRC = main.c \
-	init.c \
-	quit.c \
-	wolf.c
+	damages.c \
+	end.c \
+	some_calc.c \
+	some_checks.c \
+	some_draw_sht.c \
+	some_gather.c \
+	some_hooks.c \
+	some_move.c \
+	some_move2.c \
+	some_world.c \
+	sort_colors.c \
+	sprcstfloor.c \
+	sprite_cast.c \
+	teleport_bis.c \
+	sprite_cast2.c
 
+LIBFT = libft/libft.a
 SRCDIR = ./srcs
 OBJDIR = ./objs
 INCDIR = -I./includes -I./libft/includes
-LIB_CALL = -L./libft \
-		`SDL2/bin/sdl2-config --libs`
-
+INCDIR += -I /usr/X11/include
+LIB_CALL = -L./libft -lft
+LIB_CALL += -L/usr/X11/lib -lmlx -lXext -lX11
 CFLAGS = -Wall -Werror -Wextra -ansi -pedantic -pedantic-errors
-CFLAGS += `SDL2/bin/sdl2-config --cflags`
 
 ifeq ($(W),)
 	CC = gcc
@@ -45,7 +57,7 @@ LD = $(CC)
 OBJS = $(SRC:.c=.o)
 OBJS_PREF = $(addprefix $(OBJDIR)/, $(OBJS))
 
-all: $(SLD2) $(LIBFT) $(OBJDIR) $(NAME)
+all: $(LIBFT) $(OBJDIR) $(NAME)
 
 $(OBJDIR):
 	mkdir $(OBJDIR)
@@ -74,15 +86,5 @@ fclean-ft:
 	@( $(MAKE) fclean -C ./libft )
 
 re-ft: fclean-ft $(LIBFT)
-
-SDL2:
-	mkdir -p SDL2/junk
-	wget http://www.libsdl.org/release/SDL2-2.0.1.tar.gz
-	tar xf SDL2-2.0.1.tar.gz
-	( cd SDL2-2.0.1 \
-		&& ./configure --prefix=$(shell pwd)/SDL2/ \
-		&& $(MAKE) all \
-		&& $(MAKE) install )
-	mv SDL2-2.0.1.tar.gz SDL2-2.0.1 SDL2/junk
 
 .PHONY: clean fclean re all clean-ft fclean-ft re-ft

@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_.h                                           :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/05/17 06:10:37 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/05/17 06:10:40 by mde-jesu         ###   ########.fr       */
+/*   Created: 2013/11/20 09:58:43 by mde-jesu          #+#    #+#             */
+/*   Updated: 2014/05/09 13:45:00 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <sys/types.h>
-# define BUFF_SIZE 195
+# ifndef STRING_H
+#  define STRING_H
+#  include <string.h>
+# endif /* !STRING_H */
+
+# ifndef UNISTD_H
+#  define UNISTD_H
+#  include <unistd.h>
+# endif /* !UNISTD_H */
+
+# ifndef STDLIB_H
+#  define STDLIB_H
+#  include <stdlib.h>
+# endif /* !STDLIB_H */
 
 typedef struct		s_list
 {
@@ -24,6 +34,16 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+int		ft_abs(int n);
+
+double	ft_cos(double radian);
+double	ft_cos_d(double degree);
+double	ft_exp(int a, int ex);
+double	ft_sin(double radian);
+double	ft_sin_d(double degree);
+double	ft_tan_d(double degree);
+double	ft_tan(double radian);
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -35,7 +55,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s1);
 char	*ft_strcpy(char *s1, const char *s2);
-char	*ft_strncpy(char *s1, char *s2, size_t n);
+char	*ft_strncpy(char *s1, const char *s2, size_t n);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
@@ -53,6 +73,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
@@ -69,31 +90,28 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
-void	ft_putchar(char c);
-void	ft_putstr(char const *s);
-void	ft_putendl(char const *s);
-void	ft_putnbr(int n);
+
+size_t	ft_putchar(char c);
+size_t	ft_putstr(char const *s);
+size_t	ft_putendl(char const *s);
+size_t	ft_putnbr(int n);
+size_t	ft_putunbr(unsigned int n);
+size_t	ft_putlong(long l);
+size_t	ft_putoct(unsigned int n);
+size_t	ft_puthexa(unsigned int n);
+size_t	ft_puthexa_maj(unsigned int n);
+size_t	ft_putptr(unsigned long n);
+
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
 t_list	*ft_lstnew(void const *content, size_t content_size);
 void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-void	ft_lstadd_back(t_list **alst, t_list *new);
-void	*ft_realloc(void *s, size_t n);
-double	ft_sin(double radian);
-double	ft_cos(double radian);
-double	ft_tan(double radian);
-double	ft_sin_d(double degree);
-double	ft_cos_d(double degree);
-double	ft_tan_d(double degree);
-int		ft_abs(int nbr);
-double		ft_exp(int a, int ex);
-int		get_next_line(int const fd, char **line);
-void	ft_putd(char *name, int nbr);
 
-#endif /* !LIBFT_H */
+#endif
