@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/17 06:46:31 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/05/17 06:46:31 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/17 10:53:32 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,7 +168,7 @@ typedef struct		s_spricast
 
 void		ft_pixel_put_to_img(t_env *e, int x, int y, int color);
 void		dead_clear_img(t_env *e);
-void		get_end_color(t_env	*e, int  i, int  j, t_colors *col);
+void		get_end_color(t_env	*e, int i, int j, t_colors *col);
 void		put_end(t_env *e, int i, int j, t_colors *col);
 void		end_to_img(t_env *e);
 void		get_door_color(t_env *e, t_trac_data *d, int i, t_colors *col);
@@ -178,11 +178,11 @@ void		ft_swap_objtab(t_env *e, int *i, int *j);
 void		sort_tab(t_env *e);
 void		init_sprite_tab(t_env *e);
 void		set_trans_xy(t_env *e, t_spricast *va);
-void		set_sprite_draw_strt_nd(t_spricast *va,  t_trac_data *d, t_env *e);
+void		set_sprite_draw_strt_nd(t_spricast *va, t_trac_data *d, t_env *e);
 void		pimp_my_sprite(t_env *e, t_trac_data *d, t_spricast *va);
 void		sprite_in_img(t_env *e, t_trac_data *d, t_spricast *va);
 void		print_my_sprite(t_env *e, t_trac_data *d, t_spricast *va);
-void		get_gun_color(t_env	*e, int  i, int  j, t_colors *col);
+void		get_gun_color(t_env	*e, int i, int j, t_colors *col);
 void		put_gun(t_env *e, int i, int j, t_colors *col);
 void		gun_to_img(t_env *e);
 int			colision_check(t_env *e, double x, double y);

@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 09:58:43 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/05/09 13:45:00 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/17 11:23:27 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,4 +114,4 @@ void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
-#endif
+#endif /* !LIBFT_H */

@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/17 06:35:30 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/05/17 06:35:30 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/17 10:59:26 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	ft_tenpower(int j)
 	return (ret);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*p;
 	int		i;

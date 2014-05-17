@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/17 06:49:43 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/05/17 06:49:43 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/17 11:21:25 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,76 +29,76 @@
 # define SKY_WIDTH 900
 # define SKY_HEIGHT 90
 
-typedef struct	s_cnt
+typedef struct		s_cnt
 {
-	int			i;
-	int			j;
-	int			k;
-}				t_cnt;
+	int				i;
+	int				j;
+	int				k;
+}					t_cnt;
 
-typedef struct	s_mv_dir
+typedef struct		s_mv_dir
 {
-	int			fwd;
-	int			bwd;
-	int			rlft;
-	int			rrgt;
-	int			slft;
-	int			srgt;
-}				t_mv_dir;
+	int				fwd;
+	int				bwd;
+	int				rlft;
+	int				rrgt;
+	int				slft;
+	int				srgt;
+}					t_mv_dir;
 
-typedef struct	s_trac_data
+typedef struct		s_trac_data
 {
-	double		camera_x;
-	int			x;
-	int			map_x;
-	int			map_y;
-	double		side_dist_x;
-	double		side_dist_y;
-	double		delta_dist_x;
-	double		delta_dist_y;
-	int			step_x;
-	int			step_y;
-	int			hit;
-	int			door_hit;
-	int			side;
-	int			dside;
-	double		perp_wall_dist;
-	double		perp_door_dist;
-	double		z_buffer[SCREEN_WIDTH];
-	int			line_height;
-	int			dline_height;
-	int			wall_type;
-	int			door_type;
-	double		wall_x;
-	double		door_x;
-	int			tex_x;
-	int			dtex_x;
-	int			tex_y;
-	int			tex_id;
-	double		floor_x_wall;
-	double		floor_y_wall;
-	double		dist_wall;
-	double		dist_player;
-	double		current_dist;
-	double		weight;
-	double		current_floor_x;
-	double		current_floor_y;
-	int			draw_start;
-	int			draw_end;
-}				t_trac_data;
+	double			camera_x;
+	int				x;
+	int				map_x;
+	int				map_y;
+	double			side_dist_x;
+	double			side_dist_y;
+	double			delta_dist_x;
+	double			delta_dist_y;
+	int				step_x;
+	int				step_y;
+	int				hit;
+	int				door_hit;
+	int				side;
+	int				dside;
+	double			perp_wall_dist;
+	double			perp_door_dist;
+	double			z_buffer[SCREEN_WIDTH];
+	int				line_height;
+	int				dline_height;
+	int				wall_type;
+	int				door_type;
+	double			wall_x;
+	double			door_x;
+	int				tex_x;
+	int				dtex_x;
+	int				tex_y;
+	int				tex_id;
+	double			floor_x_wall;
+	double			floor_y_wall;
+	double			dist_wall;
+	double			dist_player;
+	double			current_dist;
+	double			weight;
+	double			current_floor_x;
+	double			current_floor_y;
+	int				draw_start;
+	int				draw_end;
+}					t_trac_data;
 
-typedef	struct	s_obj
+typedef	struct		s_obj
 {
-	double		pos_x;
-	double		pos_y;
-	double		dir_x;
-	double		dir_y;
-	double		plane_x;
-	double		plane_y;
-	int			life;
-	int			dist;
-	int			tex_id;
-}				t_obj;
+	double			pos_x;
+	double			pos_y;
+	double			dir_x;
+	double			dir_y;
+	double			plane_x;
+	double			plane_y;
+	int				life;
+	int				dist;
+	int				tex_id;
+}					t_obj;
 
 typedef struct		s_tex
 {
@@ -168,7 +168,7 @@ typedef struct		s_spricast
 
 void		ft_pixel_put_to_img(t_env *e, int x, int y, int color);
 void		dead_clear_img(t_env *e);
-void		get_end_color(t_env	*e, int  i, int  j, t_colors *col);
+void		get_end_color(t_env	*e, int i, int j, t_colors *col);
 void		put_end(t_env *e, int i, int j, t_colors *col);
 void		end_to_img(t_env *e);
 void		get_door_color(t_env *e, t_trac_data *d, int i, t_colors *col);
@@ -178,11 +178,11 @@ void		ft_swap_objtab(t_env *e, int *i, int *j);
 void		sort_tab(t_env *e);
 void		init_sprite_tab(t_env *e);
 void		set_trans_xy(t_env *e, t_spricast *va);
-void		set_sprite_draw_strt_nd(t_spricast *va,  t_trac_data *d, t_env *e);
+void		set_sprite_draw_strt_nd(t_spricast *va, t_trac_data *d, t_env *e);
 void		pimp_my_sprite(t_env *e, t_trac_data *d, t_spricast *va);
 void		sprite_in_img(t_env *e, t_trac_data *d, t_spricast *va);
 void		print_my_sprite(t_env *e, t_trac_data *d, t_spricast *va);
-void		get_gun_color(t_env	*e, int  i, int  j, t_colors *col);
+void		get_gun_color(t_env	*e, int i, int j, t_colors *col);
 void		put_gun(t_env *e, int i, int j, t_colors *col);
 void		gun_to_img(t_env *e);
 int			colision_check(t_env *e, double x, double y);

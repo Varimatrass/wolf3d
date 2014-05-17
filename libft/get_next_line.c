@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/17 06:43:37 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/05/17 06:43:37 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/05/17 11:02:39 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	ft_copybuf(char **result, char *buf, size_t *i, size_t *j)
 	(*result)[*j] = '\0';
 }
 
-static int	ft_error()
+static int	ft_error(void)
 {
 	write(2, "Read error.\n", 12);
 	return (1);
@@ -46,7 +46,7 @@ int			get_next_line(int const fd, char **line)
 	static char	buf[BUFF_SIZE + 1];
 	size_t		i;
 	size_t		j;
-	ssize_t	ret;
+	ssize_t		ret;
 
 	j = 0;
 	result = (char *)malloc(2);
